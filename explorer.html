@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM-1K Explorer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/explorer_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">DREAM-1K Explorer</h1>
+        <!-- Add the line with hyperlinks -->
+        <div class="text-center mb-4">
+            <a href="index.html" class="external-link button is-normal is-rounded is-dark">
+                🏆 Leaderboard
+            </a>
+            |
+            <a href="https://github.com/bytedance/tarsier" target="_blank">
+                <img src="static/images/github-logo.png" alt="GitHub Logo" width="20" height="20">
+                Tarsier2 Code
+            </a>
+            |
+            <a href="https://huggingface.co/your-tarsier2-model-link" target="_blank">
+                <img src="static/images/huggingface-logo.png" alt="Hugging Face Logo" width="20" height="20">
+                Tarsier2 Checkpoint
+            </a>
+            |
+            <a href="https://huggingface.co/datasets/omni-research/DREAM-1K" target="_blank">
+                <img src="static/images/huggingface-logo.png" alt="Hugging Face Logo" width="20" height="20">
+                DREAM-1k Dataset
+            </a>
+            
+        </div>
+        <div class="text-center mb-4">
+            <div class="form-check form-check-inline">Show Model Results:</div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v1" value="Tarsier2-7B-1105" checked>
+                <label class="form-check-label" for="v1">Tarsier2-7B-1105</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v2" value="GPT-4o" checked>
+                <label class="form-check-label" for="v2">GPT-4o</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v3" value="Gemini 1.5 Pro" checked>
+                <label class="form-check-label" for="v3">Gemini 1.5 Pro</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v4" value="Qwen2-VL-7B">
+                <label class="form-check-label" for="v4">Qwen2-VL-7B</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v5" value="LLaVA-Video-7B-Qwen2">
+                <label class="form-check-label" for="v5">LLaVA-Video-7B-Qwen2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v6" value="LLaVA-OneVision-7B">
+                <label class="form-check-label" for="v6">LLaVA-OneVision-7B</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v7" value="MiniCPM-V 2.6">
+                <label class="form-check-label" for="v7">MiniCPM-V 2.6</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v8" value="VILA-1.5 7B">
+                <label class="form-check-label" for="v8">VILA-1.5 7B</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v9" value="VITA">
+                <label class="form-check-label" for="v9">VITA</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v10" value="VideoLLaMA 2 7B">
+                <label class="form-check-label" for="v10">VideoLLaMA 2 7B</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="v11" value="VideoChat2-Mistral">
+                <label class="form-check-label" for="v11">VideoChat2-Mistral</label>
+            </div>
+        </div>
+        <ul class="nav nav-tabs" id="videoTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="animation-tab" data-toggle="tab" href="#animation" role="tab" aria-controls="animation" aria-selected="true">Animation Movie</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="liveaction-tab" data-toggle="tab" href="#liveaction" role="tab" aria-controls="liveaction" aria-selected="false">Live-Action Movie</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="shorts-tab" data-toggle="tab" href="#shorts" role="tab" aria-controls="shorts" aria-selected="false">Short Video</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="stock-tab" data-toggle="tab" href="#stock" role="tab" aria-controls="stock" aria-selected="false">Stock Video</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="youtube-tab" data-toggle="tab" href="#youtube" role="tab" aria-controls="youtube" aria-selected="false">YouTube Video</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="videoTabsContent">
+            <div class="tab-pane fade show active" id="animation" role="tabpanel" aria-labelledby="animation-tab">
+                <div class="row" id="animation-gallery"></div>
+            </div>
+            <div class="tab-pane fade" id="liveaction" role="tabpanel" aria-labelledby="liveaction-tab">
+                <div class="row" id="liveaction-gallery"></div>
+            </div>
+            <div class="tab-pane fade" id="stock" role="tabpanel" aria-labelledby="stock-tab">
+                <div class="row" id="stock-gallery"></div>
+            </div>
+            <div class="tab-pane fade" id="shorts" role="tabpanel" aria-labelledby="shorts-tab">
+                <div class="row" id="shorts-gallery"></div>
+            </div>
+            <div class="tab-pane fade" id="youtube" role="tabpanel" aria-labelledby="youtube-tab">
+                <div class="row" id="youtube-gallery"></div>
+            </div>
+        </div>
+    </div>
+    <div id="loading" class="text-center mt-4">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video Player</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="video-wrapper">
+                        <video id="videoPlayer" class="w-100" controls>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p id="videoDescriptions" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="static/js/explorer_script.js"></script>
+</body>
+</html>
