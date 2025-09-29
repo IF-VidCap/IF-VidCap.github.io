@@ -8,19 +8,12 @@ function generateTable() {
           <td class="js-sort"><strong>Method</strong></td>
           <td class="js-sort"><strong>Source</strong></td>
           <td class="js-sort"><strong>Date</strong></td>
-          <td class="js-sort-number"><strong><u>ALL</u></strong></td>
-          <td class="js-sort-number"><strong>FQA</strong></td>
-          <td class="js-sort-number"><strong>GPS</strong></td>
-          <td class="js-sort-number"><strong>MWP</strong></td>
-          <td class="js-sort-number"><strong>TQA</strong></td>
-          <td class="js-sort-number"><strong>VQA</strong></td>
-          <td class="js-sort-number"><strong>ALG</strong></td>
-          <td class="js-sort-number"><strong>ARI</strong></td>
-          <td class="js-sort-number"><strong>GEO</strong></td>
-          <td class="js-sort-number"><strong>LOG</strong></td>
-          <td class="js-sort-number"><strong>NUM</strong></td>
-          <td class="js-sort-number"><strong>SCI</strong></td>
-          <td class="js-sort-number"><strong>STA</strong></td>
+          <td class="js-sort-number"><strong><u>Overall ISR</u></strong></td>
+          <td class="js-sort-number"><strong>Overall CSR</strong></td>
+          <td class="js-sort-number"><strong>Rule-Based ISR</strong></td>
+          <td class="js-sort-number"><strong>Rule-Based CSR</strong></td>
+          <td class="js-sort-number"><strong>Open-ended ISR</strong></td>
+          <td class="js-sort-number"><strong>Open-ended CSR</strong></td>
       </tr>`;
 
       // sort data to make sure the best model is on top
@@ -57,14 +50,24 @@ function generateTable() {
           table += `<td>${entry.Method}</td>`;
           table += `<td><a href="${entry.Source}" class="ext-link" style="font-size: 16px;">Link</a></td>`;
           table += `<td>${entry.Date}</td>`;
-          table += `<td><b class="best-score-text">${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
+          table += `<td><b class="best-score-text">${entry.Overall_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b class="best-score-text">${entry.Overall_CSR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b class="best-score-text">${entry.RuleBased_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b class="best-score-text">${entry.RuleBased_CSR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b class="best-score-text">${entry.OpenEnded_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b class="best-score-text">${entry.OpenEnded_CSR.toFixed(1).toString()}</b></td>`;
         }
         else {
           table += `<td><b>${entry.Model}</b></td>`;
           table += `<td>${entry.Method}</td>`;
           table += `<td><a href="${entry.Source}" class="ext-link" style="font-size: 16px;">Link</a></td>`;
           table += `<td>${entry.Date}</td>`;
-          table += `<td><b>${entry.ALL.toFixed(1).toString()}</b></td>`; // .toFixed(1): round to 1 decimal place
+          table += `<td><b>${entry.Overall_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b>${entry.Overall_CSR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b>${entry.RuleBased_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b>${entry.RuleBased_CSR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b>${entry.OpenEnded_ISR.toFixed(1).toString()}</b></td>`;
+          table += `<td><b>${entry.OpenEnded_CSR.toFixed(1).toString()}</b></td>`;
         }          
 
         // if entry.FQA is a number
