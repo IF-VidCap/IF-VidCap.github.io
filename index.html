@@ -60,12 +60,9 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/bytedance/tarsier">
-            <b>Tarsier</b> 
+          <a class="navbar-item" href="https://omnivideobench.github.io/omnivideobench_home/">
+            <b>OmniVideoBench</b> 
           </a>
-          <!-- <a class="navbar-item" href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models">
-            <b>Awesome-MLLM</b> 
-          </a> -->
         </div>
       </div>
     </div>
@@ -80,7 +77,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/LINK_LOGO.png" style="width:1.6em;vertical-align: middle" alt="Logo"/>
+            <img src="static/images/logo.png" style="width:1.6em;vertical-align: middle" alt="Logo"/>
             <span class="if-vidcap" style="vertical-align: middle">IF-VidCap</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle", style="margin-bottom: 20px;">
@@ -90,6 +87,7 @@
             <span class="author-block", style="font-size:24px"><a href="https://www.nju-link.com/">NJU-LINK LAB</a></span>
             
         </div>
+        <!--
         <span class="link-block">
           <a href="explorer.html"
              class="external-link button is-normal is-rounded is-dark">
@@ -99,14 +97,13 @@
             <span>IF-VidCap Explorer</span>
           </a>
         </span>
-
+        -->
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup style="color:#6fbf73;">1</sup>USTC,</span>
-            <span class="author-block"><sup style="color:#ed4b82">2</sup>XMU,</span>
-            <span class="author-block"><sup style="color:#9400D3">3</sup>HKU,</span>
-            <span class="author-block"><sup style="color:#ffac33">4</sup>PKU,</span>
-            <span class="author-block"><sup style="color:#18acfb">5</sup>CUHK,</span>
-            <span class="author-block"><sup style="color:#33ffd6">6</sup>ECNU</span><br> -->
+            <span class="author-block"><sup style="color:#a317c3;">1</sup>Nanjing University,</span>
+            <span class="author-block"><sup style="color:#ed734b">2</sup>Kuaishou Technology,</span>
+            <span class="author-block"><sup style="color:#11a8da">3</sup>Shanghai University,</span>
+            <span class="author-block"><sup style="color:#d3ff33">4</sup>CASIA,</span>
+            <span class="author-block"><sup style="color:#fbc618">5</sup>M-A-P,</span><br>
             <!-- <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
 
@@ -114,10 +111,8 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.00634"
+                <a href="https://arxiv.org/abs/2510.18726"
                    class="external-link button is-normal is-rounded is-dark">
-                <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
-                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
@@ -126,7 +121,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/bytedance/tarsier"
+                <a href="https://github.com/NJU-LINK/IF-VidCap"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -136,11 +131,11 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/omni-research/IF-VidCap"
+                <a href="https://huggingface.co/datasets/NJU-LINK/IF-VidCap"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <!-- <i class="far fa-images"></i> -->
-                      <p style="font-size:18px">📊</p>
+                      <p style="font-size:18px">🤗</p>
                   </span>
                   <span>Dataset</span>
                 </a>
@@ -259,18 +254,18 @@
               </tr>
               <tr>
                 <!-- 子列标题 -->
-                <th data-js-sort-colNum="5"><strong style="color: #22a56e;">ISR</strong></th>
-                <th data-js-sort-colNum="6"><strong style="color: #22a56e;">CSR</strong></th>
-                <th data-js-sort-colNum="7"><strong>ISR</strong></th>
-                <th data-js-sort-colNum="8"><strong>CSR</strong></th>
-                <th data-js-sort-colNum="9"><strong>ISR</strong></th>
-                <th data-js-sort-colNum="10"><strong>CSR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="5"><strong style="color: #22a56e;">ISR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="6"><strong style="color: #22a56e;">CSR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="7"><strong>ISR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="8"><strong>CSR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="9"><strong>ISR</strong></th>
+                <th class="js-sort-number" data-js-sort-colNum="10"><strong>CSR</strong></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">gemini-2.5-pro</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">Gemini-2.5-pro</span></b></td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
@@ -284,7 +279,21 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">gemini-2.5-flash</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">Qwen3-VL-235B-A22B-Instruct</span></b></td>
+                <td style="vertical-align: middle;">235</td>
+                <td style="vertical-align: middle;">2</td>
+                <td style="vertical-align: middle;">-</td>
+                <td style="vertical-align: middle;">26.41</td>
+                <td style="vertical-align: middle;">71.65</td>
+                <td style="vertical-align: middle;">67.16</td>
+                <td style="vertical-align: middle;">84.14</td>
+                <td style="vertical-align: middle;">36.39</td>
+                <td style="vertical-align: middle;">57.12</td>
+              </tr>
+
+              <tr>
+                <td style="vertical-align: middle;">-</td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">Gemini-2.5-flash</span></b></td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
@@ -298,7 +307,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3_5-241B-A28B_thinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3.5-241B-A28B_thinking</span></b></td>
                 <td style="vertical-align: middle;">241B</td>
                 <td style="vertical-align: middle;">1.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -312,7 +321,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">gpt-4o</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">GPT-4o</span></b></td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
@@ -326,7 +335,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3_5-38B_thinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3.5-38B_thinking</span></b></td>
                 <td style="vertical-align: middle;">38B</td>
                 <td style="vertical-align: middle;">1.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -340,7 +349,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">gemini-2.0-flash</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">Gemini-2.0-flash</span></b></td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
                 <td style="vertical-align: middle;">-</td>
@@ -368,7 +377,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3_5-8B_thinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3.5-8B_thinking</span></b></td>
                 <td style="vertical-align: middle;">8B</td>
                 <td style="vertical-align: middle;">1.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -382,7 +391,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3_5-38B_nothinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3.5-38B_nothinking</span></b></td>
                 <td style="vertical-align: middle;">38B</td>
                 <td style="vertical-align: middle;">1.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -438,7 +447,7 @@
             
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">MiniCPM-V-4_5_thinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">MiniCPM-V-4.5_thinking</span></b></td>
                 <td style="vertical-align: middle;">8B</td>
                 <td style="vertical-align: middle;">2.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -466,7 +475,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3_5-8B_nothinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">InternVL3.5-8B_nothinking</span></b></td>
                 <td style="vertical-align: middle;">8B</td>
                 <td style="vertical-align: middle;">1.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -481,7 +490,7 @@
               
               <tr>
                 <td style="vertical-align: middle;">-</td>
-                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">MiniCPM-V-4_5_nothinking</span></b></td>
+                <td style="text-align: left; padding: 2px 10px;"><b class=""><span class="ext-link" style="font-size: 16px; margin-left: 5px;">MiniCPM-V-4.5_nothinking</span></b></td>
                 <td style="vertical-align: middle;">8B</td>
                 <td style="vertical-align: middle;">2.0</td>
                 <td style="vertical-align: middle;">-</td>
@@ -700,7 +709,9 @@
       <div class="column">
         <div class="content has-text-centered">
           <h2 class="title is-3">Benchmark Statistics</h2>
-          <img src="static/images/if-vidcap-statistics.png" alt="data-composition" style="max-width: 80%;"/>
+          <img src="static/images/if-vidcap-compare.png" alt="data-composition" style="max-width: 50%;"/>
+          <br></br>
+          <img src="static/images/if-vidcap-statistics.png" alt="data-composition" style="max-width: 70%;"/>
           <p style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;" >
           </p>
         </div>
@@ -721,14 +732,14 @@
   <div class="container">
     We evaluates two core dimensions—instruction following and video description quality—employing LLM-driven methods to ensure both flexibility and scalability. For rule-checkable constraints, we combine an LLM with rule scripts: the LLM serves as a content extractor while the rule scripts act as the verification executor. This integrates the LLM’s adaptability to complex text processing with the determinism of rule execution. For open-ended constraint checking, we design retrieval-based QA pairs, enabling the LLM to answer using the video caption as context. Specifically, the checklist uses true/false questions to let the LLM directly judge the semantic correctness of the description, and multiple-choice questions to have the LLM select facts inferable from the video description. All answers provided by the LLM are compared against the ground truth, and statistics are aggregated at the constraint level (a single constraint may include multiple QA pairs to enable atomic checking and control over granularity).
     
-    We use GPT-5-mini to implement both models (See <a href="https://github.com/bytedance/tarsier?tab=readme-ov-file#evaluation-approach-autodq">evaluation scripts</a>), as shown bellow.
+    We use GPT-5-mini to implement both models (See <a href="https://github.com/NJU-LINK/IF-VidCap/blob/main/generate_check_result.py">evaluation scripts</a>), as shown bellow.
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Checklist</h2>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/case.png" alt="grade-lv" width="80%"/>
-              <p>The AutoDQ workflow.</p>
+              <p>The Judge workflow.</p>
             </div>
           </div>
       </div>
@@ -748,15 +759,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <pre><code>
-      @misc{wang2024tarsierrecipestrainingevaluating,
-        title={Tarsier: Recipes for Training and Evaluating Large Video Description Models}, 
-        author={Jiawei Wang and Liping Yuan and Yuchen Zhang and Haomiao Sun},
-        year={2024},
-        eprint={2407.00634},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2407.00634}, 
-  }
+    @misc{li2025ifvidcapvideocaptionmodels,
+          title={IF-VidCap: Can Video Caption Models Follow Instructions?}, 
+          author={Shihao Li and Yuanxing Zhang and Jiangtao Wu and Zhide Lei and Yiwen He and Runzhe Wen and Chenxi Liao and Chengkang Jiang and An Ping and Shuo Gao and Suhan Wang and Zhaozhou Bian and Zijun Zhou and Jingyi Xie and Jiayi Zhou and Jing Wang and Yifan Yao and Weihao Xie and Yingshui Tan and Yanghai Wang and Qianqian Xie and Zhaoxiang Zhang and Jiaheng Liu},
+          year={2025},
+          eprint={2510.18726},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV},
+          url={https://arxiv.org/abs/2510.18726}, 
+    }
 </code></pre>
   </div>
 </section>
